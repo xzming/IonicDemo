@@ -1,0 +1,42 @@
+
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Contact
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item-sliding  *ngFor="let contact of contacts">
+    <ion-item>
+      <ion-avatar item-left>
+        <img src="assets/img/{{contact.contactid}}.jpg">
+      </ion-avatar>
+      <h2>{{contact.contactname}}</h2>
+      <p>{{contact.contactmood}}</p>
+    </ion-item>
+    <ion-item-options side="left">
+      <button primary>
+        <ion-icon name="text"></ion-icon>
+        Text
+      </button>
+      <button secondary>
+        <ion-icon name="call"></ion-icon>
+        Call
+      </button>
+    </ion-item-options>
+    <ion-item-options side="right">
+      <button primary>
+        <ion-icon name="mail"></ion-icon>
+        Email
+      </button>
+    </ion-item-options>
+  </ion-item-sliding>
+  </ion-list>
+</ion-content>
